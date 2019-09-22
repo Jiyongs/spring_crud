@@ -17,6 +17,7 @@
 		<mybatis-version>3.5.1</mybatis-version>
 		<mybatis-spring-version>2.0.1</mybatis-spring-version>
 		<json-version>20180813</json-version>
+		<json-simple-version>1.1.1</json-simple-version>
 		<mssql-version>4.2</mssql-version>
 	</properties>
 	<dependencies>
@@ -30,7 +31,7 @@
 				<exclusion>
 					<groupId>commons-logging</groupId>
 					<artifactId>commons-logging</artifactId>
-				 </exclusion>
+				</exclusion>
 			</exclusions>
 		</dependency>
 		<dependency>
@@ -38,14 +39,14 @@
 			<artifactId>spring-webmvc</artifactId>
 			<version>${org.springframework-version}</version>
 		</dependency>
-				
+
 		<!-- AspectJ -->
 		<dependency>
 			<groupId>org.aspectj</groupId>
 			<artifactId>aspectjrt</artifactId>
 			<version>${org.aspectj-version}</version>
-		</dependency>	
-		
+		</dependency>
+
 		<!-- Logging -->
 		<dependency>
 			<groupId>org.slf4j</groupId>
@@ -95,7 +96,7 @@
 			<artifactId>javax.inject</artifactId>
 			<version>1</version>
 		</dependency>
-				
+
 		<!-- Servlet -->
 		<dependency>
 			<groupId>javax.servlet</groupId>
@@ -114,92 +115,99 @@
 			<artifactId>jstl</artifactId>
 			<version>${jstl-version}</version>
 		</dependency>
-	
+
 		<!-- Test -->
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<version>4.7</version>
 			<scope>test</scope>
-		</dependency>  
-		
+		</dependency>
+
 		<!-- ********************************* 추가 ********************************* -->
 		<!-- MyBatis -->
-        <!-- https://mvnrepository.com/artifact/org.mybatis/mybatis -->
-        <dependency>
-            <groupId>org.mybatis</groupId>
-            <artifactId>mybatis</artifactId>
-            <version>${mybatis-version}</version>
-        </dependency>
-        
-        <!-- MyBatis spring -->
-        <!-- https://mvnrepository.com/artifact/org.mybatis/mybatis-spring -->
-        <dependency>
-            <groupId>org.mybatis</groupId>
-            <artifactId>mybatis-spring</artifactId>
-            <version>${mybatis-spring-version}</version>
-        </dependency>
-        
-        <!-- json -->
-        <!-- https://mvnrepository.com/artifact/org.json/json -->
-        <dependency>
-            <groupId>org.json</groupId>
-            <artifactId>json</artifactId>
-            <version>${json-version}</version>
-        </dependency>
-        
-        <!-- https://mvnrepository.com/artifact/org.springframework/spring-jdbc -->
+		<!-- https://mvnrepository.com/artifact/org.mybatis/mybatis -->
+		<dependency>
+			<groupId>org.mybatis</groupId>
+			<artifactId>mybatis</artifactId>
+			<version>${mybatis-version}</version>
+		</dependency>
+
+		<!-- MyBatis spring -->
+		<!-- https://mvnrepository.com/artifact/org.mybatis/mybatis-spring -->
+		<dependency>
+			<groupId>org.mybatis</groupId>
+			<artifactId>mybatis-spring</artifactId>
+			<version>${mybatis-spring-version}</version>
+		</dependency>
+
+		<!-- json -->
+		<!-- https://mvnrepository.com/artifact/org.json/json -->
+		<dependency>
+			<groupId>org.json</groupId>
+			<artifactId>json</artifactId>
+			<version>${json-version}</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/com.googlecode.json-simple/json-simple -->
+		<dependency>
+			<groupId>com.googlecode.json-simple</groupId>
+			<artifactId>json-simple</artifactId>
+			<version>${json-simple-version}</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.springframework/spring-jdbc -->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-jdbc</artifactId>
 			<version>${org.springframework-version}</version>
 		</dependency>
-		
+
 		<!-- mssql -->
-        <dependency>
-           <groupId>com.microsoft.sqlserver</groupId>
-           <artifactId>sqljdbc42</artifactId>
-           <version>${mssql-version}</version>
-        </dependency>
-		      
+		<dependency>
+			<groupId>com.microsoft.sqlserver</groupId>
+			<artifactId>sqljdbc42</artifactId>
+			<version>${mssql-version}</version>
+		</dependency>
+
 	</dependencies>
-	
-    <build>
-        <plugins>
-            <plugin>
-                <artifactId>maven-eclipse-plugin</artifactId>
-                <version>2.9</version>
-                <configuration>
-                    <additionalProjectnatures>
-                        <projectnature>org.springframework.ide.eclipse.core.springnature</projectnature>
-                    </additionalProjectnatures>
-                    <additionalBuildcommands>
-                        <buildcommand>org.springframework.ide.eclipse.core.springbuilder</buildcommand>
-                    </additionalBuildcommands>
-                    <downloadSources>true</downloadSources>
-                    <downloadJavadocs>true</downloadJavadocs>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>2.5.1</version>
-                <configuration>
-                    <source>1.8</source>
-                    <target>1.8</target>
-                    <compilerArgument>-Xlint:all</compilerArgument>
-                    <showWarnings>true</showWarnings>
-                    <showDeprecation>true</showDeprecation>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>exec-maven-plugin</artifactId>
-                <version>1.2.1</version>
-                <configuration>
-                    <mainClass>org.test.int1.Main</mainClass>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
+
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-eclipse-plugin</artifactId>
+				<version>2.9</version>
+				<configuration>
+					<additionalProjectnatures>
+						<projectnature>org.springframework.ide.eclipse.core.springnature</projectnature>
+					</additionalProjectnatures>
+					<additionalBuildcommands>
+						<buildcommand>org.springframework.ide.eclipse.core.springbuilder</buildcommand>
+					</additionalBuildcommands>
+					<downloadSources>true</downloadSources>
+					<downloadJavadocs>true</downloadJavadocs>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.5.1</version>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+					<compilerArgument>-Xlint:all</compilerArgument>
+					<showWarnings>true</showWarnings>
+					<showDeprecation>true</showDeprecation>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>exec-maven-plugin</artifactId>
+				<version>1.2.1</version>
+				<configuration>
+					<mainClass>org.test.int1.Main</mainClass>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
 </project>

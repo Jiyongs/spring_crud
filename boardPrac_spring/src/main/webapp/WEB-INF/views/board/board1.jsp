@@ -32,6 +32,7 @@
 	<a href="${root}/board/write?no=6&title=룰라랄라" class="btn btn-primary pull-right" roll="button">글쓰기</a>
 	<a href="${root}/board/modify?no=6" class="btn btn-primary pull-right" roll="button">글수정</a>
 	<a href="${root}/board/delete?no=6" class="btn btn-primary pull-right" roll="button">글삭제</a>
+	<a href="${root}/board/readjson" class="btn btn-primary pull-right" roll="button">json읽기</a>
 	
 	<div class="row text-center" style="width: 100%">
 		<ul class="pagination" style="float:none; margin:0 auto;">
