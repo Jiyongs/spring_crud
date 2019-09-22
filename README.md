@@ -1,2 +1,7 @@
 # spring_crud
-spring, mybatis, mssql, dbcp2
+
+- Spring
+- MyBatis
+- MS-SQL
+- DBCP2
+- CRUD 기능 / MVC구조
