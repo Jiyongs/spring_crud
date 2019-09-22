@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ <mapper namespace="com.sjy.board1.dao.Board1Dao">
+ 
+ 	<select id="getPostList" resultType="board1Dto">
+ 		select no, title, writer, postdate, viewcount
+ 		from post
+ 		order by postdate
+ 	</select>
+ 	
+ 	<insert id="writePost" parameterType="board1Dto">
+ 		insert into post(no, title)
+ 		values(#{no}, #{title})
+ 	</insert>
+ 	
+ 	<update id="modifyPost" parameterType="int">
+ 			update post
+ 			set viewcount = 1000000
+ 			where no = #{value}
+ 	</update>
+ 	
+ 	<delete id="deletePost" parameterType="int">
+ 		delete
+		from post
+		where no = #{value}
+ 	</delete>
+
+ 	
+ </mapper>

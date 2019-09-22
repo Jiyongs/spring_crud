@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context>
+   <Resource name="jdbc/javaboard" auth="Container"
+      type="javax.sql.DataSource"
+      factory="org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory"
+      driverClassName="com.microsoft.sqlserver.jdbc.SQLServerDriver"
+      url="jdbc:sqlserver://localhost:1433;DatabaseName=jydb;integratedSecurity=true"
+      maxTotal="100" maxIdle="20" maxWaitMillis="10000"
+      removeAbandonedOnBorrow="true" removeAbandonedTimeout="60"
+      logAbandoned="true" />
+
+    <WatchedResource>WEB-INF/web.xml</WatchedResource>
+
+</Context>
