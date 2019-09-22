@@ -8,8 +8,9 @@
   <!-- 패키지에 alias 추가 -->
 	<typeAliases>
 	
-  	  <typeAlias alias="memberDto" type="com.sjy.board1.model.MemberDto"/>
   	  <typeAlias alias="board1Dto" type="com.sjy.board1.model.Board1Dto"/>
+  	  <typeAlias alias="mappyPoiDto" type="com.sjy.board1.model.MappyPoiDto"/>
+  	  <typeAlias alias="rawPoiDto" type="com.sjy.board1.model.RawPoiDto"/>
 
 	</typeAliases>
   
